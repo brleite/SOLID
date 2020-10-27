@@ -55,8 +55,13 @@ namespace Alura.LeilaoOnline.WebApp
                 options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             );
 
+            /*
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                */
+
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseNpgsql(Configuration.GetConnectionString("SOLIDPostgresConnection")));
 
             services.AddScoped<ILeilaoDao, LeiloesDao>();
             services.AddScoped<ICategoriaDao, CategoriasDao>();
