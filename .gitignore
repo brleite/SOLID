@@ -350,4 +350,4 @@ MigrationBackup/
 .ionide/
 
 ################## Custom
-src\Alura.LeilaoOnline.WebApp\appsettings.json
+src/Alura.LeilaoOnline.WebApp/appsettings.json
