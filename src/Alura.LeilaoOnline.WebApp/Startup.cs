@@ -63,8 +63,9 @@ namespace Alura.LeilaoOnline.WebApp
             services.AddDbContext<AppDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("SOLIDPostgresConnection")));
 
-            services.AddScoped<ILeilaoDao, LeiloesDao>();
-            services.AddScoped<ICategoriaDao, CategoriasDao>();
+            // Por requisição
+            services.AddTransient<ILeilaoDao, LeilaoDaoComEfCore>();
+            services.AddTransient<ICategoriaDao, CategoriasDao>();
 
             services.AddScoped<IAdminService, ArquivamentoAdminService>();
             services.AddScoped<IProdutoService, DefaultProdutoService>();
