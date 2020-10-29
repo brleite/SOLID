@@ -4,11 +4,11 @@ using System.Linq;
 
 namespace Alura.LeilaoOnline.WebApp.Dados.DAO.EfCore
 {
-    public class CategoriasDao : ICategoriaDao
+    public class CategoriaDaoComEfCore : ICategoriaDao
     {
         private readonly AppDbContext _context;
 
-        public CategoriasDao(AppDbContext context)
+        public CategoriaDaoComEfCore(AppDbContext context)
         {
             _context = context;
         }

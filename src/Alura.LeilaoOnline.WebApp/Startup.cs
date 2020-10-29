@@ -65,7 +65,7 @@ namespace Alura.LeilaoOnline.WebApp
 
             // Por requisição
             services.AddTransient<ILeilaoDao, LeilaoDaoComEfCore>();
-            services.AddTransient<ICategoriaDao, CategoriasDao>();
+            services.AddTransient<ICategoriaDao, CategoriaDaoComEfCore>();
 
             services.AddScoped<IAdminService, ArquivamentoAdminService>();
             services.AddScoped<IProdutoService, DefaultProdutoService>();
